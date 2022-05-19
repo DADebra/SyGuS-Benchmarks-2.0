@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/darin/sygus-tools/sygus/bin/convert.py", line 69, in <module>
+    main(parser.parse_args())
+  File "/home/darin/sygus-tools/sygus/bin/convert.py", line 20, in main
+    symbol_table = SymbolTableBuilder.run(program)
+  File "/home/darin/sygus-tools/sygus/src/symbol_table_builder.py", line 455, in run
+    program.accept(builder)
+  File "/home/darin/sygus-tools/sygus/src/ast.py", line 685, in accept
+    return visitor.visit_program(self)
+  File "/home/darin/sygus-tools/sygus/src/symbol_table_builder.py", line 445, in visit_program
+    command.accept(self)
+  File "/home/darin/sygus-tools/sygus/src/ast.py", line 344, in accept
+    return visitor.visit_constraint_command(self)
+  File "/home/darin/sygus-tools/sygus/src/symbol_table_builder.py", line 161, in visit_constraint_command
+    constraint_command.constraint.accept(self)
+  File "/home/darin/sygus-tools/sygus/src/ast.py", line 259, in accept
+    return visitor.visit_function_application_term(self)
+  File "/home/darin/sygus-tools/sygus/src/symbol_table_builder.py", line 98, in visit_function_application_term
+    arg.accept(self)
+  File "/home/darin/sygus-tools/sygus/src/ast.py", line 259, in accept
+    return visitor.visit_function_application_term(self)
+  File "/home/darin/sygus-tools/sygus/src/symbol_table_builder.py", line 98, in visit_function_application_term
+    arg.accept(self)
+  File "/home/darin/sygus-tools/sygus/src/ast.py", line 235, in accept
+    return visitor.visit_identifier_term(self)
+  File "/home/darin/sygus-tools/sygus/src/symbol_table_builder.py", line 68, in visit_identifier_term
+    identifier_term.start_location, identifier_term.end_location)
+sygus.src.exceptions.ResolutionException: Error resolving name:
+Could not resolve identifier: suffixSize|suffix|.
+At: 39:7 -- 39:25

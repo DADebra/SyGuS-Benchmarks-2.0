@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/darin/sygus-tools/sygus/bin/convert.py", line 69, in <module>
+    main(parser.parse_args())
+  File "/home/darin/sygus-tools/sygus/bin/convert.py", line 19, in main
+    program = parser.parse(args.input_file.read())
+  File "/home/darin/sygus-tools/sygus/src/v1/parser.py", line 333, in parse
+    return self._parse()
+  File "/home/darin/sygus-tools/sygus/src/base/parser.py", line 144, in _parse
+    self.parser.parse(self.input_string, lexer=self.lexer.lexer)
+  File "/usr/lib/python3/dist-packages/ply/yacc.py", line 333, in parse
+    return self.parseopt_notrack(input, lexer, debug, tracking, tokenfunc)
+  File "/usr/lib/python3/dist-packages/ply/yacc.py", line 1201, in parseopt_notrack
+    tok = call_errorfunc(self.errorfunc, errtoken, self)
+  File "/usr/lib/python3/dist-packages/ply/yacc.py", line 192, in call_errorfunc
+    r = errorfunc(token)
+  File "/home/darin/sygus-tools/sygus/src/base/parser.py", line 133, in p_error
+    raise exceptions.ParseException(f.getvalue(), location, location)
+sygus.src.exceptions.ParseException: Error while parsing:
+Syntax error at token: TK_SYMBOL, and
+At: 6:458 -- 6:458
